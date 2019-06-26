@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Referenced Documents</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="RD_container">
+    <div class="RD_aside">
+      <div class="aside_wrapper">
+        <div class="aside_scroll">
+          <div class="aside_title">
+            <p class="directory">目录</p>
+          </div>
+          <div class="aside_main">
+            <ul>
+              <li class="title">
+                <a href="javascript:;">HTML</a>
+              </li>
+              <li>
+                <a href="#title1">表格table属性</a>
+              </li>
+              <li>
+                <a href="#title2">链接伪类选择器</a>
+                <span>即a标签鼠标操作样式</span>
+              </li>
+              <li>
+                <a href="#title3">双伪元素清除浮动</a>               
+              </li>
+              <li>
+                <a href="#title4">溢出文字</a>               
+              </li>
+              <li>
+                <a href="#title5">css画三角形</a>               
+              </li>
+              <li>
+                <a href="#title6">文字阴影</a>               
+              </li>
+              <li>
+                <a href="#title7">盒子阴影</a>               
+              </li>
+              <li>
+                <a href="#title8">background-size</a>               
+              </li>
+              <li>
+                <a href="#title9">flex布局</a>       
+              </li>
+              <li>
+                <a href="#title10">响应式布局</a>       
+              </li>
+              <li>
+                <a href="#title12">rem布局</a>       
+              </li>
+              <li>
+                <a href="#title11">VScode常用插件</a>
+              </li>
+              <li class="title">
+                <a href="javascript:;">Javascript</a>
+              </li>
+              <li>
+                <a href="#title13">常用的Math，数组，字符串的方法</a>
+              </li>
+              <li>
+                <a href="#title14">js原生修改类名class的方法</a>
+              </li>
+              <li>
+                <a href="#title15">js原生节点查找</a>
+              </li>
+              <li>
+                <a href="#title16">js原生节点操作</a>
+              </li>
+              <li>
+                <a href="#title17">js原生addEventListener注册事件</a>
+              </li>
+              <li>
+                <a href="#title18">js原生记录鼠标位置相关属性</a>
+              </li>
+              <li>
+                <a href="#title19">js原生offset系列</a>
+              </li>
+              <li>
+                <a href="#title20">js原生scroll系列</a>
+              </li>
+              <li>
+                <a href="#title21">js原生client系列</a>
+              </li>
+              <li>
+                <a href="#title22">js原生window.onload入口函数</a>
+              </li>
+              <li>
+                <a href="#title23">location和history常用对象</a>
+              </li>
+              <li>
+                <a href="#title32">继承</a>
+              </li>
+              <li>
+                <a href="#title33">上下文调用模式call apply 和bind</a>
+              </li>
+
+              <li class="title">
+                <a href="javascript:;">JQuery</a>
+              </li>
+              <li>
+                <a href="#title24">JQuery筛选选择器</a>
+              </li>
+              <li>
+                <a href="#title25">JQuery操作属性Prop方法</a>
+              </li>
+              <li>
+                <a href="#title26">JQuery自定义动画</a>
+              </li>
+              <li>
+                <a href="#title27">JQuery节点操作</a>
+              </li>
+              <li>
+                <a href="#title28">JQuery中scroll与offset系列</a>
+              </li>
+              <li>
+                <a href="#title29">JQuery中显式迭代，each方法</a>
+              </li>
+              <li>
+                <a href="#title30">JQuery中多库共存</a>
+              </li>
+              <li>
+                <a href="#title31">JQuery插件-懒加载</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="RD_content">
+      <div class="content_wrapper">
+        <div class="content_scroll">
+          <div class="content_title">
+            <a href="javascript:;" id='title1'>表格table属性</a>
+          </div>
+          <div class="content_main  clearfix">
+            <p class="tips">行内样式:&lt;table border="1" cellspacing="0" cellpadding="0" width="200" height="300"&gt; &lt;/table&gt; </p>
+            <p>cellspacing:设置单元格与单元格边框之间的空白间隙</p>
+            <p>cellpadding:设置单元格内容与边框之间的空白间隙</p>
+            <p class="tips">
+                CSS样式表:
+            </p>
+              <pre class="fl">
+table {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #000;
+  border-collapse:collapse;
+  border-spacing:0;
+}
+th,td {
+  border: 1px solid #000;
+  padding:0;
+}
+              </pre>
+            <p>border-collapse:collapse;将边框合并成单一的边框，效果等于与cellspacing</p>
+            <p>border-spacing 可以修改单元格与单元格边框之间的空白间隙，但是如果border-collapse设置成collapse是没有效果的</p>
+            <p>th,td{padding:0}就是将cellpadding去掉</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;">合并单元格</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">合并单元格遵循一个顺序规定：从上至下，从左至右</p>
+            <p class="tips">rowspan跨行合并&nbsp;&nbsp;&nbsp;colspan跨列合并，他们都是行内样式，参数为合并单元格的数量</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title2'>链接伪类选择器 即a标签鼠标操作样式</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              :link{ } 未访问的链接；:visited{ } 已访问过的链接；:hover{ } 鼠标经过链接；:active{ }鼠标按下链接中
+            </p>
+            <p>以上样式的顺序固定</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title3'>双伪元素清除浮动</a>
+          </div>
+          <div class="content_main">
+            <pre>
+              .clearfix::before,
+              .clearfix::after {
+                  content: "";
+                  display: table;
+              }
+              .clearfix::after {
+                  clear: both;
+              }
+              /* 兼容 IE 67 */
+              .clearfix {
+                  *zoom: 1;
+              }
+            </pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title4'>溢出文字</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">①盒子需要overflow:hidden 隐藏超出部分</p>
+            <p class="tips">②white-space:一般文字一行显示不下的时候会自动换行 参数:normal默认 nowrap 强制一行显示</p>
+            <p class="tips">text-overflow:文字溢出 参数:clip:不显示省略号 ellipsis:显示省略号</p>
+            <pre>
+              /*单行溢出*/
+              .one-txt-cut {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+              /*多行溢出*/
+              .txt-cut {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            </pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title5'>css画三角形</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              设置一个盒子，宽高为0，某个边框设置样式，三角形的高即为border的宽度（border-width），其他三条边框，设置成透明色（transparent）
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title6'>文字阴影</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">text-shadow:水平偏移 垂直偏移 模糊度 阴影颜色;</p>
+            <p>可以给一个文字设置多个阴影效果，中间使用逗号 "," 进行连接。</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title7'>盒子阴影</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">box-shadow:水平阴影 垂直阴影 模糊距离 （阴影尺寸） 阴影颜色  （内/外阴影）；</p>
+            <p>前两个属性是必须写的。其余的可以省略。 默认阴影是外部阴影，但是不能设置outset这个属性值。如果想要内部阴影，请设置inset</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title8'>background-size</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">参数可以是百分比，数值（+px），还有几个关键词</p>
+            <p class="tips">关键词</p>
+            <p>contain(包含)，图片的宽高有一个铺满了盒子，就不再扩大，盒子会留空。cover(覆盖)图片等比例缩放，直到盒子全部被占满，图片会展示不全</p>
+            <p class="tips">background连写：background：color image repeat attachment position / size</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title9'>flex布局</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">display:flex</p>
+            <p>一个盒子设置了<span class="bold">display：flex</span>之后，这个盒子就有了主轴 和侧轴 的概念,子元素默认在主轴开始的位置排列</p>
+            <p class="tips">flex-direction:修改主轴的方向</p>
+            <p>参数：row：默认值，水平向右；row-reverse：水平向左；column：垂直向下；column-reverse：垂直向上</p>
+            <p class="tips">justify-content:设置子元素在主轴上的排列方式</p>
+            <p>参数：flex-start：默认，在主轴开始的位置排列；flex-end：在主轴结尾的位置排列；center：在中间排列；space-around：盒子均分排布，带左右空隙；space-between：盒子均分排布，左右贴边</p>
+            <p class="tips">align-items：设置侧轴的排列方式（单排）<span class="bold">（查文档）</span></p>
+            <p>参数：flex-start：在侧轴顶部的位置排列（贴着顶部）； flex-end：在侧轴底部的位置排列（贴着底部）； center：中间；stretch：子盒子没有高度时默认拉伸（上下）</p>
+            <p class="tips">flex-wrap：设置子元素是否换行<span class="bold">（查文档）</span></p>
+            <p>参数：nowrap不换行 wrap换行</p>
+            <p class="tips">align-content：设置侧轴的排列方式（多行）<span class="bold">（查文档）</span></p>          
+            <p>参数：flex-start：默认，在侧轴开始的位置排列；flex-end：在侧轴结尾的位置排列；center：在中间排列；space-around：盒子均分排布，带上下空隙；space-between：盒子均分排布，上下贴边；stretch：拉伸，不设置高度的情况下</p>
+            <p class="tips">-------------------↑以上属性给父盒子添加，以下属性给子盒子添加↓-------------------</p>
+            <p class="tips">flex：分配主轴的空间 参数为数字</p>
+            <p class="tips">order：设置子元素排序，默认0，数值越小，顺序越靠前</p>
+            <p class="tips">align-self：设置单个子元素在侧轴的排列方式<span class="bold">（查文档）</span></p>
+            <p>参数：参数：flex-start：在侧轴顶部的位置排列（贴着顶部）； flex-end：在侧轴底部的位置排列（贴着底部）； center：中间；stretch：子盒子没有高度时默认拉伸（上下）</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id='title10'>响应式布局</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">根据媒体查询来适配各种屏幕的设备@media(条件) and (条件) ……{ }</p>
+            <pre>
+              //定义less函数
+              .adapter(@minWidth) {
+                @media (min-width:@minWidth) {
+                  html {
+                    //round四舍五入，2是小数点后两位
+                    font-size: round(@minWidth/15,2)
+                  }
+                }
+              }
+
+              .adapter(320px);
+              .adapter(360px);
+              .adapter(375px);
+              .adapter(384px);
+              .adapter(400px);
+              .adapter(414px);
+              .adapter(424px);
+              .adapter(480px);
+              .adapter(540px);
+              .adapter(720px);
+              .adapter(750px);
+
+              //调用函数后的css文件中的样式
+              @media (min-width:750px) {
+                html {
+                  font-size: 750/50px;
+                }
+              }
+            </pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title12">rem布局</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">rem布局是将我们常用的px像素装换成rem单位，由html的font-size去改变rem的大小，px = font-size * rem</p>
+            <p class="tips">js写rem响应式布局</p>
+            <pre>$(function (){
+  $(window).resize(function () {
+    let width = $(window).width()
+    width = Math.max(width, 320)  //最小宽度
+    width = Math.min(width, 750)  //最大宽度
+    let fontSize = width / 15     
+    $('html').css('fontSize', fontSize.toFixed(2) + 'px')  
+  }).resize()
+})
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title11">VScode常用插件</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">Auto Rename Tag：修改标签，自动匹配另一个标签</p>
+            <p class="tips">Bracket Pair Colorizer：给括号颜色，方便区分对应括号</p>
+            <p class="tips">Chinese(Simplified)Language：中文汉化</p>
+            <p class="tips">Easy Less：less功能</p>
+            <p class="clearfix">需要配置：设置--{}，在里面添加
+            </p>
+              <pre>
+"less.compile": {
+"out": "../css/"   /*less转化成css文件的存放位置*/
+},</pre>
+            <p class="tips">Material Icon Theme：左侧文件图标美化</p>
+            <p class="tips">Open in Browser：设置默认打开文件的浏览器</p>
+            <p class="tips">px2rem：设置px转成rem</p>
+            <p>需要配置：设置中搜索rem，修改font-size</p>
+          </div>
+          <p class="red">--------------------------华丽的分割线--------------------------</p>
+          <div class="content_title">
+            <a href="javascript:;" id="title13">常用的Math，数组，字符串的方法（查文档）</a>
+          </div>
+          <div class="content_main">
+            <p class="tips bold">Math方法</p>
+            <p class="tips">Math.abs()：绝对值，Math.pow(x,n)：x的n次方，Math.sqrt()：开平方</p>
+            <p class="tips bold">Array方法</p>
+            <p class="tips">arr.join()：用括号内的字符将数组拼接成字符串，返回值为字符串 arr.reverse()：翻转数组,原数组会<span class="red bold">改变</span>，返回值是该数组</p>
+            <p class="tips">arr.push()：在数组最后添加若干个元素，arr.unshift()：在数组前面添加若干个元素，添加的返回值是新数组的长度，原数组<span class="red bold">改变</span></p>
+            <p class="tips">arr.pop()：删除数组最后一个元素，arr.shift()：删除数组第一个元素，返回值是删除的元素，原数组<span class="red bold">改变</span></p>
+            <p class="tips">arr.sort(a-b)：数组从小到大排序(b-a)数组从大到小，返回值为排序后的数组，括号内参数可以是一个函数方法，排序的规则</p>
+            <p class="tips">arr.concat(arr1)：合并两个数组，返回值为新数组</p>
+            <p class="tips">arr.slice(begin,end)：从begin的位置开始截取数组，直到end(自己判断截不截取end的位置)，如果end不传，截取到最后，返回值为截取的部分，原数组<span class="red bold">不改变</span></p>
+            <p class="tips">arr.splice(begin,deletcount,element....)：在数组任意位置删除/添加/插入若干元素，begin：开始位置，deletcount：删除个数，这个参数有点意思，不传的时候，会删除开始位置之后所有的元素，传0的时候，并不会删除元素，而会添加element。当删除了元素时，返回值是被删除元素组成的新数组。如果没有删除元素，返回值为一个空数组。原数组会<span class="red bold">改变</span></p>
+            <p class="tips">arr.indexOf()：查找某个元素在数组中第一次出现的位置，返回值为第一次出现的下标，如果为-1，说明不存在</p>
+            <p class="tips">arr.lastIndexOf()：查找某个元素在数组最后一次出现的位置，返回值为下标，如果为-1，说明不存在</p>
+             <p class="tips bold">String方法</p>
+             <p class="tips">string.indexOf()：查找某个元素在字符串中第一次出现的位置，返回值为第一次出现的下标，如果为-1，说明不存在</p>
+            <p class="tips">string.lastIndexOf()：查找某个元素在字符串最后一次出现的位置，返回值为下标，如果为-1，说明不存在</p>
+            <p class="tips">string.trim()：删除字符串两边的空格，并不会删除中间的空格</p>
+            <p class="tips">string.toUpperCase：转大写，string.toLowerCase：转小写</p>
+            <p class="tips">string.concat(string1)：合并两个字符串，返回值为新的字符串。实际开发时用+将两个字符串拼接即可</p>
+            <p class="tips">string.slice(begin,end)：截取字符串的一部分，包含begin，不包含end</p>
+            <p class="tips">string.substring(begin,end)：同上，不同的是此方法end不能为负</p>
+            <p class="tips">string.substr(begin,length)：截取字符串的一部分，从begin开始截取length个</p>
+            <p class="tips">string.split(分隔符)：根据分隔符在字符串中的位置，将字符串切割成数组，可以使用[index]下标来获取某一部分的字符串</p>
+            <p class="tips">string.replace('a','b')：将字符串中的a用b代替</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title14">js原生修改类名class的方法</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">①className：仅仅只是获取与修改类名</p>
+            <p class="tips">②classList，可以对类名进行操作<span class="bold">推荐使用</span><br/>classList.add()添加类名，不会覆盖原有的类名；classList.remove()移除类名，只会移除参数内的类名；classList.contains()判断是否包含类名；classList.toggle()切换类名</p> 
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title15">js原生节点查找</a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">子节点</span> childNodes：获取所有的孩子节点（包括了元素节点和其他很多类型的节点，基本不常用）<br/>children：获取所有的子元素（用途很广泛），兼容性：IE678会把注释节点算上。<br/>firstChild：第一个子节点<br/>firstElementChild：第一个子元素 有兼容性问题（IE678）<br/>lastChild：最后一个节点<br/>lastElementChild：最后一个子元素 有兼容性问题（IE678）</p>
+            <p class="tips"><span class="bold">兄弟节点</span>nextSibling：下一个兄弟节点<br/>nextElementSibling：下一个兄弟元素（IE678不兼容）<br/>previousSibling：上一个兄弟节点<br/>previousElementSibling：上一个兄弟元素 有兼容性问题 可以封装一个兼容性方法</p>
+            <p class="tips"><span class="bold">父节点</span>parentNode：父节点  没有兼容性问题</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title16">js原生节点操作</a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">添加节点</span>①parent.appendChild(child)：在父节点后面添加child<br/>②parent.insertBefore(newChild,refChild)：通过父元素在refChild前面添加newChild，如果refChild为null，则在<span class="bold">最后面</span>添加；如果refChild为parent.firstElementChild，则在<span class="bold">最前面</span>添加</p>
+            <p class="tips"><span class="bold">创建节点</span>①document.write()：基本不使用，会覆盖原有的页面<br/>②innerHTML：会覆盖原有的页面<br/>③document.createElement(标签名)：在内存中创建需要的标签，然后再往标签内添加内容，再使用添加节点的方法，把创建的标签添加到父元素中</p>
+            <p class="tips"><span class="bold">删除节点</span>parent.removeChild(child)：从父元素中删除child</p>
+            <p class="tips"><span class="bold">替换节点</span>parent.replaceChild(newchild,oldchild)：用newchild替换oldchild</p>
+            <p class="tips"><span class="bold">克隆节点</span>node.cloneNode()：在内存中克隆一个节点。参数为布尔类型，true：深克隆，会把标签包括其内容原样的克隆一份；false：浅克隆，只是克隆一个标签</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title17">js原生addEventListener注册事件</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">参数有三个，参数1：事件类型；参数2：事件处理程序；参数3：指定事件是否在捕获阶段执行，默认false表示冒泡，true为捕获，优点是可以注册多个事件，不会覆盖</p>
+            <p class="tips">移除绑定事件，removeEventListener(事件类型，注册事件的函数名)，移除事件时，需要事件的函数名，所以注册的时候需要命名函数</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title18">js原生记录鼠标位置相关属性</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">e.screenX,e.screenY：相对于屏幕左上角<br/>e.clientX,e.clientY：相对于可视区<br/>e.pageX,e.pageY：相对于document页面的左上角（推荐使用）</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title19">js原生offset系列</a>
+          </div>
+          <div class="content_main clearfix">
+            <img src="images/offset.png" alt=""  class="fr" width="50%">
+            <p class="tips">offsetHeight和offsetWidth：获取元素真实的宽高，只读属性，width+padding+border<br/>offsetLeft和offsetTop：获取盒子距离最近有定位的父元素的真实距离，有margin值，只读属性<br/>offsetParent：找到离盒子最近的有定位的父元素</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title20">js原生scroll系列</a>
+          </div>
+          <div class="content_main clearfix">
+            <img src="images/scroll.png" alt="" class="fr" width="50%">
+            <p class="tips">scrollWidth和scrollHeight：盒子内容的真实的宽度和高度。与和盒子大小无关，仅仅与盒子的内容有关系<br/>scrollLeft和scrollTop,获取滚动条的距离</p>
+            <p class="tips">onscroll事件，滚动事件，可以通过注册该事件，用window.pageYOffset,来获取垂直滚动条滚动距离</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title21">js原生client系列</a>
+          </div>
+          <div class="content_main clearfix">
+            <img src="images/client1.png" alt="" class="fr" width="50%">
+            <p class="tips">clietnWidth: 获取内容和padding的大小（不包括边框） clientHeight:获取内容与padding的大小（不包括边框）<br/>clientLeft和clientTop：完全没用</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title22">js原生window.onload入口函数</a>
+          </div>
+          <div class="content_main">
+            <pre>window.onload = function(){
+    //里面的代码会在窗体加载完成后执行。
+    //窗体加载完成包括文档树的加载、还有图片、文件的加载完成。
+}</pre>
+            <p class="tips">作用：等待页面加载完成，还会等待图片也加载完成。<br/><span class="bold">1、如果想要在结构前面获取DOM元素；2、如果想要获取图片的宽高</span></p>
+            <p>一个页面能不能写两个window.onload?答案是后面window.onload的会覆盖前面的</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title23">location和history常用对象</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">location.href：页面跳转</p>
+            <p class="tips">location.reload()：页面刷新</p>
+            <p class="tips">location.search：获取地址栏里链接？之后的内容</p>
+            <p class="tips">location.hash：获取地址栏里链接的锚点，#之后的内容</p>
+            <p class="tips">history.go()：参数为1：下一页；参数为0：当前页；参数为-1：上一页</p>
+            <p class="tips">history.forward()：前进</p>
+            <p class="tips">history.back()：后退</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title32">继承</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">1.<span class="bold">混入式继承：</span>给对象上添加一个方法extend,可以遍历其他对象自身的方法，拷贝到自己身上</p>
+            <pre>
+extend:function(obj){
+  for(let k in obj){
+    if(obj.hasOwnProperty(k)){ //判断是不是obj自身的方法
+      this[k] = obj[k]
+    } 
+  }
+}</pre>
+          <p class="tips">2.<span class="bold">原型式继承</span>①直接给原型上加属性，这样实例就会继承：Person.prototype=<br/>②原型替换：把构造函数的原型替换成了一个新的对象，此方法新对象里需有constructor属性Person.prototype={constructor:Person}<br/>③混入式继承+原型式继承：将混入式的extend方法放到原型上，这样可以继承多个对象</p>
+          <pre>
+Person.prototype.extend = function(obj) {
+  for (var k in obj) {
+    if (obj.hasOwnProperty(k)) {
+      this[k] = obj[k]
+    }
+  }
+}</pre>
+          <p class="tips">3.<span class="bold">经典继承：</span>var obj = Object.create(proto)：快速让一个对象继承另一个对象，返回值：obj 新对象，新对象的原型就是proto</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title33">上下文调用模式call apply 和bind</a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">call</span>调用一个函数，并可以改变这个函数的this指向，语法：fn.call(this,参数1,参数2)。参数为这个函数需要的参数</p>
+            <p class="tips"><span class="bold">apply</span>调用一个函数，并可以改变这个函数的this指向，语法：fn.call(this,[参数1,参数2])。参数为这个函数需要的参数,但它是一个数组</p>
+            <p class="tips"><span class="bold">bind</span>根据一个函数返回一个新的函数，并且新函数函数的this永远指向bind的第一个参数，语法：var newFn = fn.bind(window)<br/>与call和apply不同，call，apply是借用方法，立马执行。bind是绑定方法，不会执行</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title24">JQuery筛选选择器</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">$('a').children('b')：找到a元素里所有子元素中的b元素</p>
+            <p class="tips">$('a').find('b')：找到a元素所有后代元素中的b元素</p>
+            <p class="tips">siblings()：所有兄弟元素；next()：下一个兄弟；prev()：上一个兄弟；parent()：父亲；eq(index)：找下标的元素</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title25">JQuery操作属性Prop方法</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">prop()：checked、selected、disabled这类boolean类型的属性来说，不能用attr方法，只能用prop方法</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title26">JQuery自定义动画</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">$(selector).animate({params},[speed],[easing],[callback]);</p>
+            <p>params：是一个对象，包含需要动画的css属性与属性值（必写）；speed：动画时长（可写）；easing：动画运动曲线（可写），默认：swing（缓动），linear（匀速）；callback：回调函数，动画执行完后执行（可写）</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title27">JQuery节点操作</a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">创造节点</span>$("&lt;div&gt;这是一个div&lt;/div&gt;")</p>
+            <p class="tips"><span class="bold">添加节点</span>parent.append(child)/child.appendTo(parent)：把child添加到parent的子元素最后<br/>parent.prepend(child)/child.prependTo(parent)：把child添加到parent的子元素最前<br/>node.before(node1)：把node1添加到node前面<br/>node.after(node1)：把node1添加到node后面</p>
+            <p class="tips"><span class="bold">删除节点</span>node.remove()：删除自己<br/>node.empty()：清空节点，把node的所有子元素全部清除</p>
+            <p class="tips"><span class="bold">克隆节点</span>$(selector).clone()：克隆，返回值为新的元素。有一个参数，参数为true，深克隆，会克隆事件，参数为false，深克隆，但不会克隆事件</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title28">JQuery中scroll与offset系列</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">$(window).scrollTop()获取滚动条的位置；$('html').animate({scrollTop:0},2000)：回顶部<br/>$(selector).offset()：获取元素距离document的位置,返回值为对象：{left:100, top:100}<br/>$(selector).position():获取相对于其最近的有定位的父元素的位置</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title29">JQuery中显式迭代，each方法</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">$(selector).each(function(index,element){$(this)})：$(this)为遍历的每一个元素</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title30">JQuery中多库共存</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">当jquery的$被其他文件占用，此时我们不得释放$的控制权，var $$ = $.noConflict();//释放$的控制权,并且把$的能力给了$$</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title31">JQuery插件-懒加载（查文档）</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">Lazy Load 是一个用 JavaScript 编写的 jQuery 插件. 它可以延迟加载长页面中的图片. 在浏览器可视区域外的图片不会被载入, 直到用户将页面滚动到它们所在的位置.在包含很多大图片长页面中延迟加载图片可以加快页面加载速度. 浏览器将会在加载可见图片之后即进入就绪状态. 在某些情况下还可以帮助降低服务器负担.</p>
+            <p class="tips"><span class="bold">使用方法</span>引入jQuery.js与jquery.lazyload.js<br/>你必须改变图片的标签。图像的地址必须放在data-original属性上。给懒加载图像一个特定的class（例如:lazy）。这样你可以很容易地进行图像插件捆绑。图片必须设置宽高代码如下：</p>
+            <pre>&lt;img class="lazy" alt="" width="640" height="480" data-original="img/example.jpg" /&gt;
+
+$(function() {
+    $("img.lazy").lazyload();
+});</pre>
+            <p class="tips"><span class="bold">自定义的参数</span>threshold：设置临界点，当图片距离屏幕到达临界点距离的时候，提前加载，参数为不带单位的数值<br/>event：设置事件来触发加载，默认情况下是向下滚动到图片的时候加载，也可以设置其他事件触发<br/>effect：设置特效，默认是完全加载并调用show()，也可以自己定义显示方式<br/></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="lib/jquery-1.12.4.js"></script>
+  <script src="lib/jquery.nicescroll.js"></script>
+  <script>
+    $('.aside_wrapper').niceScroll({
+      cursorcolor: "#ccc", //滚动条的颜色   
+      cursoropacitymax: 1, //滚动条的透明度，从0-1   
+      touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备   
+      cursorwidth: "4px", //滚动条的宽度   
+      cursorborder: "0", // 游标边框css定义    
+      cursorborderradius: "5px", //以像素为光标边界半径  圆角   
+      autohidemode: true, //是否隐藏滚动条  true的时候默认不显示滚动条，当鼠标经过的时候显示滚动条   
+      zindex: "auto", //给滚动条设置z-index值    
+      railpadding: {
+          top: 0,
+          right: 0,
+          left: 0,
+          bottom: 0
+      }, //滚动条的位置
+    })
+  </script>
+</body>
+</html>
