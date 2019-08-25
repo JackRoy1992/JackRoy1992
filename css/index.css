@@ -4,17 +4,20 @@
   position: relative;
 }
 .red {
-  color: red!important;
+  color: red !important;
 }
 .bold {
-  font-weight: 700!important;
+  font-weight: 700 !important;
   color: #000;
 }
 p.tips {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  color: #000;
+  color: #304455;
   margin: 5px 0;
+}
+p.tips a {
+  color: #2086d7;
 }
 p {
   color: #888;
@@ -26,7 +29,7 @@ pre {
   border: 1px solid #aaa;
 }
 .RD_aside {
-  width: 30%;
+  width: 25%;
   height: 100%;
   border-right: 3px solid #666;
   position: fixed;
@@ -36,7 +39,7 @@ pre {
   font-size: 32px;
   font-weight: 700;
   margin: 0 20px;
-  color: #000;
+  color: #333;
   border-bottom: 2px solid #000;
 }
 .RD_aside .aside_wrapper {
@@ -54,7 +57,7 @@ pre {
   font-weight: 500;
 }
 .RD_aside .aside_main ul li.title a {
-  color: #000;
+  color: #273849;
 }
 .RD_aside .aside_main ul li a {
   color: #36c1f8;
@@ -62,7 +65,7 @@ pre {
 .RD_content {
   overflow: hidden;
   padding: 20px;
-  padding-left: 31%;
+  padding-left: 27%;
 }
 .RD_content .content_title a {
   font-size: 20px;

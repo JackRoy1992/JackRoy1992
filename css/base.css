@@ -41,9 +41,9 @@ section {
   box-sizing: border-box;
 }
 body {
-  font: 16px/1.5 Tahoma, sans-serif;
-  color: #000;
-  background-color: #f1f1f1;
+  font: 16px/1.5 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  color: #304455;
+  background-color: #f8f8f8;
 }
 /*去除边框*/
 fieldset,
@@ -61,7 +61,7 @@ textarea {
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: #333;
   /* 取消链接高亮(移动端)  */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

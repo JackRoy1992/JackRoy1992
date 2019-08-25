@@ -57,6 +57,9 @@
                 <a href="#title12">rem布局</a>       
               </li>
               <li>
+                <a href="#title35">css实现区域滚动</a>
+              </li>
+              <li>
                 <a href="#title11">VScode常用插件</a>
               </li>
               <li class="title">
@@ -129,7 +132,126 @@
               <li>
                 <a href="#title31">JQuery插件-懒加载</a>
               </li>
-
+              <li class="title">
+                <a href="javascript:;">Ajax</a>
+              </li>
+              <li>
+                  <a href="#title34">XMLHttpRequest</a>
+              </li>
+              <li>
+                  <a href="#title36">自己封装ajax</a>
+              </li>
+              <li>
+                  <a href="#title37">反向代理配置</a>
+              </li>
+              <li>
+                  <a href="#title38">axios</a>
+              </li>
+              <li>
+                  <a href="#title39">axios拦截器</a>
+              </li>
+              <li class="title">
+                <a href="javascript:;">VUE</a>
+              </li>
+              <li>
+                  <a href="#title40">事件修饰符</a>
+              </li>
+              <li>
+                  <a href="#title41">vm.$set/vue.set(给data对象动态添加属性)</a>
+              </li>
+              <li>
+                  <a href="#title42">vm.$nextTick/Vue.nextTick(获取更新后的数据)</a>
+              </li>
+              <li>
+                  <a href="#title43">directive(自定义指令)</a>
+              </li>
+              <li>
+                  <a href="#title44">vue组件之间通信之父传子</a>
+              </li>
+              <li>
+                  <a href="#title45">vue组件之间通信之子传父</a>
+              </li>
+              <li>
+                  <a href="#title46">vue组件之间通信之兄弟通信</a>
+              </li>
+              <li>
+                  <a href="#title47">$refs</a>
+              </li>
+              <li>
+                  <a href="#title48">路由参数的获取</a>
+              </li>
+              <li>
+                  <a href="#title49">vue-cli脚手架相关</a>
+              </li>
+              <li>
+                  <a href="#title50">v-slot插槽</a>
+              </li>
+              <li>
+                  <a href="#title51">prop类型校验</a>
+              </li>
+              <li>
+                  <a href="#title52">.sync修饰符</a>
+              </li>
+              <li class="title">
+                <a href="javascript:;">VUEX</a>
+              </li>
+              <li>
+                  <a href="#title53">Vuex介绍</a>
+              </li>
+              <li>
+                  <a href="#title54">state</a>
+              </li>
+              <li>
+                  <a href="#title57">getters</a>
+              </li>
+              <li>
+                  <a href="#title55">mutations</a>
+              </li>
+              <li>
+                  <a href="#title56">actions</a>
+              </li>
+              <li>
+                  <a href="#title58">module模块</a>
+              </li>
+              <li>
+                  <a href="#title59">mapState,mapGetters,mapActions,mapMutations</a>
+              </li>
+              <li class="title">
+                <a href="javascript:;">webpack</a>
+              </li>
+              <li>
+                  <a href="#title60">webpack介绍</a>
+              </li>
+              <li>
+                  <a href="#title61">webpack常规配置</a>
+              </li>
+              <li>
+                  <a href="#title62">webpack不同文件配置loader</a>
+              </li>
+              <li>
+                  <a href="#title63">webpack中plugin插件</a>
+              </li>
+              <li>
+                  <a href="#title64">webpack-dev-server</a>
+              </li>
+              <li class="title">
+                <a href="javascript:;">git</a>
+              </li>
+              <li>
+                  <a href="#title65">git基本使用指令</a>
+              </li>
+              <li>
+                  <a href="#title66">git查看diff不同</a>
+              </li>
+              <li>
+                  <a href="#title67">git分支</a>
+              </li>
+              <li>
+                  <a href="#title68">git与远程仓库</a>
+              </li>
+              <li>
+                  <a href="#title69">git中忽略的文件</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -330,6 +452,19 @@ th,td {
 })
 </pre>
           </div>
+
+          <div class="content_title">
+            <a href="javascript:;" id="title35">css实现区域滚动</a>
+          </div>
+          <div class="content_main">
+            <p class="tips">①左右分栏区域滚动</p>
+            <p class="tips">容器：position:absolute 不给高度但利用top与bottom实现高度，使用display:flex布局</p>
+            <p class="tips">内容：一侧给死宽度，另一侧flex:1,都给overflow-y:scroll</p>
+            <p class="tips">②横向的区域滚动</p>
+            <p class="tips">容器：overflow:auto;overflow-x:auto!important;overflow-y:hidden;white-space:nowrap(内容不换行)</p>
+            <p class="tips">内容：display：inline-block;<span class="red">千万不要用浮动</span></p>
+            <p class="tips">如果以上方法不想使用，就动态渲染容器的宽度吧</p>
+          </div>
           <div class="content_title">
             <a href="javascript:;" id="title11">VScode常用插件</a>
           </div>
@@ -348,6 +483,17 @@ th,td {
             <p class="tips">Open in Browser：设置默认打开文件的浏览器</p>
             <p class="tips">px2rem：设置px转成rem</p>
             <p>需要配置：设置中搜索rem，修改font-size</p>
+            <p class="tips">react中jsx标签用tab自动生成</p>
+            <p class="clearfix">需要配置：设置--{}，在里面添加
+            </p>
+            <pre>//jsx标签tab
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "postcss": "css"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true</pre>
           </div>
           <p class="red">--------------------------华丽的分割线--------------------------</p>
           <div class="content_title">
@@ -553,6 +699,804 @@ $(function() {
     $("img.lazy").lazyload();
 });</pre>
             <p class="tips"><span class="bold">自定义的参数</span>threshold：设置临界点，当图片距离屏幕到达临界点距离的时候，提前加载，参数为不带单位的数值<br/>event：设置事件来触发加载，默认情况下是向下滚动到图片的时候加载，也可以设置其他事件触发<br/>effect：设置特效，默认是完全加载并调用show()，也可以自己定义显示方式<br/></p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title34">
+              XMLHttpRequest
+            </a>
+          </div>
+          <div class="content_main">
+            <pre>
+            //创建一个XMLHttpRequest对象
+            var xhr = new XMLHttpRequest()
+            //设置请求行(post方式)
+            xhr.open('post', 请求地址)
+            //设置请求行(get方式)请求的地址 需要在url后面拼上参数列表
+            xhr.open('get',请求地址？参数)
+            //设置请求头(get方式不需要请求头)
+            xhr.setRequestHeader(
+                'Content-Type',
+                'application/x-www-form-urlencoded'
+            )
+            //设置请求体(post方式)
+            xhr.send('username=' + this.value)
+            //设置请求体(get方式参数在地址内，所以请求体不需要传参)
+            xhr.send(null)
+            //获取响应事件
+            xhr.onreadystatechange = function () {
+                // 响应状态为4并且响应成功200
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    //响应体
+                    xhr.responseText
+                }
+            }</pre>
+          </div>
+          <div class="content_title">
+             <a href="javascript:;" id="title36">
+              自己封装ajax
+            </a>
+          </div>
+          <div class="content_main">
+<pre>function myAjax(options) {
+  if (!options || typeof options !== 'object') {
+    return false
+  }
+  // 声明请求方式，地址，参数
+  let type = options.type || 'get'
+  let url = options.url
+  if (!url) return false
+  let data = options.data || null
+  // 有data的时候是post请求，null为给请求
+  // 将data对象转换成&拼接的字符串
+  if (data && typeof data === 'object') {
+    let arr = []
+    for (let k in data) {
+      arr.push(k + '=' + data[k])
+    }
+    data = arr.join('&')
+  }
+  // 声明参数类型,成功、失败的回调
+  let dataType = options.dataType || 'text'
+  let success = options.success
+  let err = options.err
+  let xhr = XMLHttpRequest()
+  if (type === 'get') {
+    // 如果是get请求，那么就要拼参数url？data
+    if (!data) {
+      url = url
+    } else {
+      url = url + '?' + data
+    }
+    data = null
+  }
+  // 请求行
+  xhr.open(type, url)
+  // 请求头
+  if (type === 'post') {
+    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+  }
+  // 请求体
+  xhr.send(data)
+  // 获取响应
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      let res
+      if (xhr.status === 200) {
+        if (dataType === 'xml') {
+          res = xhr.responseXML
+        } else if (dataType === 'json') {
+          res = JSON.parse(xhr.responseText)
+        } else {
+          res = xhr.responseText
+        }
+        success && success(res)
+      } else {
+        err && err()
+      }
+    }
+  }
+}</pre>
+          </div>
+          <div class="content_title">
+             <a href="javascript:;" id="title37">
+              反向代理配置
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">vue2.x:在config/index.js中配置（待验证）</span></p>
+<pre>/* vue-cli 配置代理的配置参数： */
+
+proxyTable: {
+  // 代理规则
+  '/api': {
+    // 代理的目标服务器地址
+    target: 'http://m.beequick.cn/data/',
+    // https请求需要该设置
+    secure: false,
+    // 必须设置该项
+    changeOrigin: true,
+    // 将 '/api' 替换成 ''
+    pathRewrite: { "^/api": "" }
+  }
+},</pre>
+          <p class="tips"><span class="bold">vue3.0:在Vue-cli 生成的项目根目录中创建一个 vue.config.js（与 package.json 同级）</span></p>
+<pre>// https://cli.vuejs.org/zh/config/#devserver-proxy
+
+module.exports = {
+  // 选项...
+
+  // devServer 实际上就是 webpack-dev-server 这个包
+  devServer: {
+    // proxy 设置代理的配置项
+    // 配置文档：https://github.com/chimurai/http-proxy-middleware#proxycontext-config
+    proxy: {
+      // '/api' 表示 代理规则
+      // 在 Vue 组件中使用 axios 发送请求的时候： axios.get('/api/xxx')
+      // 也就是你的请求地址需要以当前规则（比如：/api）开头，那么，本次请求才会被代理
+      // 如果某一个接口不需要被代理，就可以直接： axios.get('http://localhost:8080/api/xxx')
+      // 这样配置后，最终的得到的接口地址为： http://localhost:8080/api/xxx
+      '/api': {
+        // 目标服务器地址，也就是接口服务器的真实地址
+        target: 'http://localhost:8080/',
+        // 跨域时一般都设置该值 为 true
+        changeOrigin: true,
+        // 重写接口路由
+        pathRewrite: {
+          '^/api': '' // 这样处理后，最终得到的接口路径为： http://localhost:8080/xxx
+        }
+      },
+
+      // 其他代理~
+      '/foo': {
+        target: '<other_url>'
+      }
+    }
+  }</pre>
+          <p class="tips"><span class="bold">React：1 安装：yarn add http-proxy-middleware
+2 在 src 中创建文件：setupProxy.js
+</span></p>
+<pre>const proxy = require('http-proxy-middleware')
+
+module.exports = function(app) {
+  // /api 表示代理路径
+  // target 表示目标服务器的地址
+  app.use(
+    proxy('/api', {
+      target: 'http://localhost:8080/',
+      // 跨域时一般都设置该值 为 true
+      changeOrigin: true,
+      // 重写接口路由
+      pathRewrite: {
+        '^/api': '' // 这样处理后，最终得到的接口路径为： http://localhost:8080/xxx
+      }
+    })
+  )
+}</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title38">
+              axios
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">安装 npm i axios</p>
+            <p class="tips">axios可以用.then，因为它内部封装了promise，不支持jsonp</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title39">
+              axios拦截器
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">vue：在main.js文件中引入axios</span></p>
+<pre>// 在vue原型上添加$http方法，这样每次都可以通过this.$http来发送axios
+Vue.prototype.$http = Axios;
+  // baseURL替换，以后就可以直接url：后面的地址了
+Axios.defaults.baseURL = "http://localhost:8888/api/private/v1/";
+  // axios请求拦截器，配置带token的请求头
+Axios.interceptors.request.use(function(config) {
+  config.headers.Authorization = localStorage.getItem("mytoken");
+  return config;
+});</pre>
+        <p class="tips"><span class="bold">React:自己封装一个api.js方法</span></p>
+<pre>// 引入axios,开发环境，上线环境的BASE_URL，token的处理方法
+import axios from 'axios'
+import { BASE_URL } from './url'
+import { getToken, removeToken } from './token'
+
+const API = axios.create({
+  baseURL: BASE_URL
+})
+
+//请求拦截器
+API.interceptors.request.use(config => {
+  const { url } = config
+  if (
+    url.startsWith('/user') &&
+    !url.startsWith('/user/registered') &&
+    !url.startsWith('/user/login')
+  ) {
+    config.headers.authorization = getToken()
+  }
+  return config
+})
+//响应拦截器
+API.interceptors.response.use(res => {
+  if (res.data.status === 400) {
+    removeToken()
+  }
+  return res
+})
+export { API }</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title40">
+              事件修饰符
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">.stop:阻止事件冒泡  .self:只有自己可以触发  .prevent:阻止事件默认行为  .once:只触发一次  .capture:阻止事件捕获</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title41">
+              vm.$set/vue.set
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">数组通过索引直接修改索引对应的内容，是无法实现响应式的效果this.students[1] = {id: 2, name: "贵安"};</p>
+            <p class="tips">此时可以使用this.$set(this.students, "1", {id: 2, name: "贵安"})</p>
+            <p class="tips">Vue.set( 要设置属性的对象, "要修改/添加的属性名", 值 )</p>
+            <p class="tips">什么时候用$set?1. 当给对象动态添加属性的时候，需要用$set 2. 当想要通过数组的下表给元素赋值的时候，需要用$set</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title42">
+              vm.$nextTick/Vue.nextTick
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">vue中数据的更新是异步，所以要访问更新后的数据就要使用vm.$nextTick/Vue.nextTick</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title43">
+              directive
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">自定义指令，分为全局注册vue.directive("指令名",{……钩子函数})与局部注册new vue({directive:{指令名(el){……钩子函数}}})</p>
+            <p class="tips">钩子函数如下：</p>
+            <p class="tips">insert:当当前指令所在的元素被插入到页面时执行</p>
+            <p class="tips">bind:当vue要对当前指令所在的元素进行解析的时候</p>
+            <p class="tips">update:当当前指令绑定的数据发生改变的时候</p>
+            <p class="tips">componentUpdate:当数据改变完成，元素更新完毕之后</p>
+            <p class="tips">unbind:当指令被卸载的时候</p>
+            <p class="tips">在自定义指令中的钩子函数里，我们可以拿到和当前指令相关的所有信息</p>
+            <p class="tips">
+            <img src="./images/binding的属性.png" alt="" width="80%">
+            </p>
+            <p class="tips">name:当前指令名；rowname:带V的指令吗；expression:等号后面的表达式；arg:指令参数； modifiers:指令修饰等，这是一个对象，修饰符都会被作为属性存在这个对象中，属性值为true；value:表达式的值</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title44">
+              vue组件之间通信之父传子
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              父传子：1.父组件双向绑定msg；2.子组件在父亲那，通过:msgFromFather绑定数据msg；3.子组件中通过props:["msgFromFather"]接收数据，并在html标签里通过{{msgFromFather}}展示接收到的数据
+            </p>
+<pre>// 父组件
+&lt;template>
+  &lt;div>
+    &lt;div>
+      父亲发给儿子的消息:
+      &lt;input type="text" v-model="msg" />
+      &lt;son :msgFromFather="msg" />
+    &lt;/div>
+ &lt;/div>
+&lt;/template>
+&lt;script>
+export default {
+  data() {
+    return {
+      msg: ""
+    };
+  },
+  components: {
+    son: () => import("../components/son.vue")
+  }
+};
+&lt;/script>
+// 子组件
+&lt;template>
+  &lt;div>
+    &lt;div>儿子收到父亲的信息：{{msgFromFather}}&lt;/div>
+  &lt;/div>
+&lt;/template>
+&lt;script>
+export default {
+  props: ["msgFromFather"]
+};
+&lt;/script>
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title45">
+              vue组件之间通信之子传父
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">子传父：</p>
+            <p class="tips">1.儿子通过触发一个事件给父亲发消息，比如点击按钮;2.这个事件使用$emit将父亲传递过来的事件与要传递的数据绑定</p>
+            <p class="tips">3.父亲自己有一个方法将儿子那边传来的数据赋值给自己的message;4.父亲通过@这个方法将获取儿子信息的方法传递给儿子</p>
+<pre>// 父组件
+&lt;template>
+  &lt;div>
+    &lt;div>
+      父亲收到儿子的信息：{{message}}
+      &lt;son1 @msgFromSon="msgFromSon" />
+    &lt;/div>
+  &lt;/div>
+&lt;/template>
+&lt;script>
+export default {
+  data() {
+    return {
+      message: ""
+    };
+  },
+  methods: {
+    msgFromSon(msg) {
+      this.message = msg;
+    }
+  },
+  components: {
+    son1: () => import("../components/son1.vue")
+  }
+};
+&lt;/script>
+// 子组件
+&lt;template>
+  &lt;div>
+    &lt;div>
+      儿子发给父亲的信息：
+      &lt;input type="text" v-model="msg" />
+      &lt;button @click="sendMsgToFather">发消息给父亲&lt;/button>
+    &lt;/div>
+  &lt;/div>
+&lt;/template>
+&lt;script>
+export default {
+  data() {
+    return {
+      msg: ""
+    };
+  },
+  methods: {
+    sendMsgToFather() {
+      this.$emit("msgFromSon", this.msg);
+    }
+  }
+};
+&lt;/script>
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title46">
+              vue组件之间通信之兄弟通信
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">兄弟通信：</p>
+            <p class="tips">1.在入口文件创建了一个vue实例bus，同时window.bus=bus暴露bus到全局</p>
+            <p class="tips">2.大哥身上有一个事件利用bus.$emit将传递的数据与方法msgFromBother1绑定</p>
+            <p class="tips">3.小弟一出生就bus.$on绑定了一个事件msgFromBother1，将大哥传来的数据赋值给自己展示的数据</p>
+<pre>// main.js文件 创建一个空的vue实例bus
+  const bus = new vue({})
+  window.bus = bus
+// bother1组件
+&lt;template>
+  &lt;div>
+    &lt;div>
+      我是大哥，我要告诉我小弟：
+      &lt;input type="text" v-model="msg" @blur="sendMsgToBother2" />
+    &lt;/div>
+  &lt;/div>
+&lt;/template>
+&lt;script>
+export default {
+  data() {
+    return {
+      msg: ""
+    };
+  },
+  methods: {
+    sendMsgToBother2() {
+      bus.$emit("msgFromBother1", this.msg);
+    }
+  }
+};
+&lt;/script>
+// bother2组件
+&lt;template>
+  &lt;div>
+    &lt;div>我是小弟，大哥告诉我要:{{message}}&lt;/div>
+  &lt;/div>
+&lt;/template>
+&lt;script>
+export default {
+  data() {
+    return {
+      message: ""
+    };
+  },
+  created() {
+    bus.$on("msgFromBother1", msg => {
+      this.message = msg;
+    });
+  }
+};
+&lt;/script>
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title47">
+              $refs
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              情景1：ref加在vue组件的标签中，$refs获取的就是组件的实例
+            </p>
+            <p class="tips">应用：非常规的父子通信</p>
+            <p class="tips">1.父组件中在子标签中添加一个ref属性，属性值为名字；</p>
+            <p class="tips">&lt;div>这是父组件 &lt;son ref='child'>&lt;/son>  &lt;button @click='clkHandler'>获取子组件中的数据&lt;/button>&lt;/div></p>
+            <p class="tips">2.父组件中可以通过this.$refs.名字.数据，直接访问子组件中的数据</p>
+            <p class="tips">methods: {clkHandler(){console.lo(this.$refs.child);}}
+            </p>
+            <p class="tips">情景2：ref加在DOM元素上，那么获取的是DOM对象</p>
+            <p class="tips">ref加在DOM元素上，$ref.名字获取DOM对象</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title48">
+              路由参数的获取
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">this.$route.query：当组件中获取路由？传递的参数时使用</p>
+            <p class="tips">this.$route.params：获取动态路由传递的参数/:id/:name/:age</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title49">
+              vue-cli脚手架相关
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">安装：npm i -g @vue/cli</p>
+            <p class="tips">vue create 项目名：创建项目</p>
+<pre>// main.js创建一个vue实例，通过$mount把实例挂载到#app
+new Vue({
+  router,
+// render函数，是吧APP这个组件，渲染到了当前vue实例所在的位置
+  render: h => h(App)
+}).$mount('#app')</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title50">
+              v-slot插槽
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">什么时候使用插槽？</p>
+            <p class="tips">当组件中需要一些内容，而这个内容是通过在组件标签内书写，传递进去的，那么我们就要使用插槽接收</p>
+            <p class="tips"><span class="bold">具名插槽：</span>多个内容需要插入不同位置的时候</p>
+            <p class="tips">html：&lt;div slot="front">&lt;/div></p>
+            <p class="tips">组件的template：&lt;slot name='front'>&lt;/slot> </p>
+            <p class="tips">多个插槽可以用&lt;template>&lt;/template>包裹起来</p>
+            <p class="tips"><span class="bold">作用域插槽：</span>当我们在使用插槽时，需要用到组件中的数据时</p>
+            <p class="tips">html:&lt;template v-slot:first="{btnText}">&lt;button>{{btnText}}&lt;/button>&lt;/template></p>
+            <p class="tips">组件的template：&lt;slot name='first' :btnText='btnText'>&lt;/slot></p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title51">
+              prop类型校验
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">在开发组件供别人使用时，我们需要的prop的值需要指定类型，所以需要对prop的类型进行校验</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title52">
+              .sync修饰符
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">在无法使用v-model的情况下，又需要数据双向绑定，此时使用v-bind绑定属性，然后使用.sync修饰符，也可以实现双向绑定的效果</p>
+            <p class="tips">
+              :msg.sync="msg"
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title53">
+              Vuex介绍
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">安装：npm i vuex</p>
+            <p class="tips">在src文件夹中创建一个store文件夹，里面一个index.js文件</p>
+            <p class="tips">引入vue vuex，Vue.use(Vuex)使用Vuex插件</p>
+            <p class="tips">创建一个Vuex实例：const store = new Vuex.store({})；导出store：export default store；</p>
+            <p class="tips">开发环境下一定使用严格模式：strict: true；发布环境下则不需要，所以实际配置</p>
+<pre>const store = new Vuex.Store({
+  strict: process.env.NODE_ENV !== 'production'
+})</pre>
+            <p class="tips">main.js中引入store，在vue实例中加入store：new Vue({store})</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title54">
+              state
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">state用来存储数据的，通过this.$store.state在页面中获取存储的数据</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title57">
+              getters
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">getters类似计算属性：</p>
+<pre>getters: {
+    doneTodos: state => {
+      return state.todos.filter(todo => todo.done)
+    }
+  }</pre>
+            <p class="tips">不同计算属性，getters可以传参，但因为getters已经有了一个参数state，所以我们通过返回一个函数，来传递参数</p>
+<pre>getters: {
+  getTodoById: (state) => (id) => {
+    return state.todos.find(todo => todo.id === id)
+  }
+}</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title55">
+              mutations
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">将处理数据的方法（同步）写在mutations中</p>
+            <p class="tips">页面中触发mutations：this.$store.commit("处理数据函数名",参数)</p>
+            <p class="tips">mutations中的处理函数有两个参数：第一个参数为state，第二个参数为传入的参数</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title56">
+              actions
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">actions可以进行异步方法，实际提交的还是mutations，而不是直接改变状态</p>
+            <p class="tips">actions中接收了一个与store实例具有相同方法和属性的context对象，context.commit("处理数据函数名",参数)，类似$store.commit触发</p>
+            <p class="tips">同样的，可以使用context.state与context.getters</p>
+            <p class="tips">页面中触发actions：this.$store.dispatch("处理函数名",参数)</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title58">
+              module模块
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">Vuex允许我们将store分割成module，每个模块都有自己的state，mutations，actions，getters</p>
+<pre>const moduleA = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
+
+const moduleB = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
+})
+
+store.state.a // -> moduleA 的状态
+store.state.b // -> moduleB 的状态</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title59">
+              mapState,mapGetters,mapActions,mapMutations
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">每次在组件中调用state，getters，actions，mutations都要写一个方法或者属性，然后通过$store调用很麻烦</p>
+            <p class="tips">import {mapState,mapGetters,mapActions,mapMutations} from 'vuex'</p>
+            <p class="tips">调用时</p>
+<pre>computed：{
+  ...mapState(["数据名称"]),
+  ...mapGetters(["数据名称"])
+},
+methods:{
+  ...mapMutations(["mutations的方法名称"]),
+  ...mapActions(["actions的方法名称"])
+}</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title60">
+              webpack介绍
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">webpack模块化打包工具</p>
+            <p class="tips">安装：本地安装npm i webpack webpack-cli -D:</p>
+            <p class="tips">在package.json中添加scripts，以下两种方式</p>
+            <p class="tips">1."scripts": {
+    "build": "webpack index.js -o ./dist/bundle.js"}</p>
+            <p class="tips">2."scripts": {
+    "build": "webpack"} 还需要在根目录下创建webpack.config.js</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title61">
+              webpack常规配置
+            </a>
+          </div>
+          <div class="content_main">
+          <p class="tips">主要的四个基本配置项：1.entry:入口文件；2.output：输出文件；3.module：规则；4.plugins：插件</p>
+<pre>module.exports = {
+  mode: "development",
+  entry: path.join(__dirname, "./src/main.js"),
+  output: {
+    path: path.join(__dirname, "dist"),
+    filename: "handler.js"
+  },
+  module: {
+    rules: []
+  },
+  plugins: []
+}</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title62">
+              webpack不同文件配置loader
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">webpack只认识js，默认也只对js进行打包，对于CSS、图片、字体图标、.vue文件都不认识，所以需要配置对于的loader <span class="bold">（需要安装）</span>，在module里的rules（具体配置可以<a href="https://www.webpackjs.com/loaders/">查看</a>）</p>
+<pre>rules: [
+  {
+    test: /\.less$/,
+    use: [{
+      loader: "style-loader" // creates style nodes from JS strings
+    }, {
+      loader: "css-loader" // translates CSS into CommonJS
+    }, {
+      loader: "less-loader" // compiles Less to CSS
+    }]
+  },
+  {
+    test: /\.vue$/,
+    loader: 'vue-loader'
+  },
+  {
+    // 用来匹配文件名称的
+    test: /\.js$/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
+]</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title63">
+              webpack中plugin插件
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">1.VueLoaderPlugin：vue打包必须的插件</p>
+            <p class="tips">const VueLoaderPlugin = require('vue-loader/lib/plugin')</p>
+            <p class="tips">2.webpack打包时dist文件中没有HTML文件：此时需要使用html-webpack-plugin可以自动生成html文件</p>
+            <p class="tips">const HtmlWebpackPlugin = require('html-webpack-plugin')</p>
+            <p class="tips">3.打包时需要自动删除之前的dist文件夹重建新的：使用clean-webpack-plugin</p>
+            <p class="tips">const {CleanWebpackPlugin} = require('clean-webpack-plugin')</p>
+<pre>plugins: [
+  // 请确保引入这个插件！
+  new CleanWebpackPlugin(),
+  new HtmlWebpackPlugin({
+    template: path.join(__dirname,'./src/index.html')
+  }),
+  new VueLoaderPlugin()
+]</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title64">
+              webpack-dev-server
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">安装：npm install --save-dev webpack-dev-server</p>
+            <p class="tips">作用：自动启动http服务，自动打开浏览器，自动监视文件的变化，每次修改代码，都会重新打包（在临时文件夹），所以还要build打包</p>
+<pre>// 与plugins同级
+  devServer:{
+    // 打包输出的文件夹名
+    contentBase: './dist',
+    // 运行的端口
+    port:9999,
+    // 是否自动打开浏览器
+    open:true
+  }</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title65">
+              git基本使用指令
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">git使用前需要进行配置，每台电脑执行一次</p>
+            <p class="tips">git config --global user.name+作者名</p>
+            <p class="tips">git config --global user.email+邮箱</p>
+            <p class="tips">git管理项目，每个项目只执行一次，会生成一个.git的隐藏文件夹</p>
+            <p class="tips">git init</p>
+            <p class="tips">git status：查看当前项目所有文件状态（有没有修改，有没有被管理）</p>
+            <p class="tips">git add 文件名：将这个文件由git管理</p>
+            <p class="tips">git commit -m "版本信息描述"：将当前内容生成一个版本存到库中</p>
+            <p class="tips">git log：查看以往提交的版本</p>
+            <p class="tips">git reflog：查看所有日志
+            </p>
+            <p class="tips">git reset --hard 版本号：回滚到指定的版本</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title66">
+              git查看diff不同
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">git diff：工作区与暂存区的不同</p>
+            <p class="tips">git diff -cache：暂存区与库存区的不同</p>
+            <p class="tips">git diff HEAD：工作区与库存区的不同</p>
+            <p class="tips">git diff 版本号1 版本号2：两个版本之间的不同</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title67">
+              git分支
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">git branch：查看分支信息</p>
+            <p class="tips">git branch "分支名"：创建新的分支</p>
+            <p class="tips">git checkout "分支名"：切换分支 </p>
+            <p class="tips">git checkout -b "分支名"：创建并切换分支</p>
+            <p class="tips">git merge "要要合并到当前分支的分支"：将分支合并到当前分支</p>
+            <p class="tips">git branch -d "分支名"：删除分支</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title68">
+              git与远程仓库
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">git clone 仓库地址 本地保存的文件夹名：从远程仓库克隆代码</p>
+            <p class="tips">git push 仓库地址 本地分支名:远程分支名：将代码放到远程仓库</p>
+            <p class="tips">git pull 仓库地址 分支名称：从远程仓库拉去更新后的内容</p>
+            <p class="tips">git remote add 别名 仓库地址：将仓库地址用别名替代</p>
+            <p class="tips">git remote：查看所有别名</p>
+            <p class="tips">git remote get-url 别名/set-url 别名 url地址：获取/设置</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title69">
+              git中忽略的文件
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">开发项目的时候我们可能有些文件、文件夹不需要git管理。在git add之前，新建一个.gitignore文件，在.gitignore文件里写不需要git管理的文件，文件夹名</p>
           </div>
         </div>
       </div>
