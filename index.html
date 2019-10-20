@@ -252,6 +252,45 @@
               <li>
                   <a href="#title69">git中忽略的文件</a>
               </li>
+              <li class="title">
+                <a href="javascript:;">React</a>
+              </li>
+              <li>
+                  <a href="#title70">创建React项目</a>
+              </li>
+              <li>
+                  <a href="#title71">React创建组件的方式</a>
+              </li>
+              <li>
+                  <a href="#title72">React中事件处理解决this指向问题</a>
+              </li>
+              <li>
+                  <a href="#title73">React表单处理-受控组件</a>
+              </li>
+              <li>
+                  <a href="#title74">React表单处理-非受控组件</a>
+              </li>
+              <li>
+                  <a href="#title75">React组件通讯之父传子</a>
+              </li>
+              <li>
+                  <a href="#title76">React组件通讯之子传父</a>
+              </li>
+              <li>
+                  <a href="#title77">React组件通讯之兄弟通讯</a>
+              </li>
+              <li>
+                  <a href="#title78">React组件通讯之context跨组件</a>
+              </li>
+              <li>
+                  <a href="#title79">Props深入</a>
+              </li>
+              <li>
+                  <a href="#title80">React路由</a>
+              </li>
+              <li>
+                  <a href="#title81">Antd-Mobile的BUG</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -1498,11 +1537,248 @@ methods:{
           <div class="content_main">
             <p class="tips">开发项目的时候我们可能有些文件、文件夹不需要git管理。在git add之前，新建一个.gitignore文件，在.gitignore文件里写不需要git管理的文件，文件夹名</p>
           </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title70">
+              创建React项目
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">1、安装npm i react react-dom;</p>
+            <p class="tips">2、初始化项目 npx create-react-app 项目名（npx命令在npm v5.2.0之后引入）<br />
+            npm init react-app 项目名<br />
+            yarn create react-app 项目名
+            </p>
+            <p class="tips">3、渲染React元素：ReactDom.render(参数1，参数2)</p>
+            <p class="tips">参数1：要渲染的React元素标签；参数2：渲染在页面中的哪个元素中</p>
+            <p class="tips">例如：ReactDOM.render(<App />, document.getElementById('root'))写在根目录的index.js</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title71">
+              React创建组件的方式
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips"><span class="bold">一、使用函数创建组件</span><br />1、组件必须有返回值：不需要渲染内容就返回null；要渲染内容就返回JSX；<br />2、组件名必须大写开头</p>
+            <p class="tips">例如：function FilterFooter(){return JSX}或者const FilterFooter = () => JSX</p>
+            <p class="tips"><span class="bold">二、使用类创建组件</span><br />1、组件名必须大写；<br />2、必须继承来自React.Component父类<br />3、必须提供一个render方法</p>
+<pre>// 完整的类组件示例
+  class Hello extend React.Component {
+    constructor(){
+      super()
+      this.state = {
+        count: 0
+      }
+    }
+    // constructor(){}也可以简写
+    state= {
+      count: 0
+    }
+    render() {
+      return (
+        JSX
+      )
+    }
+  }
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title72">
+              React中事件处理解决this指向问题
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              1、利用箭头函数：render()方法中使用箭头函数调用处理函数
+            </p>
+            <p class="tips">
+              2、Function.prototype.bind()：在constructor中使用bind方法
+            </p>
+            <p class="tips">
+              3、class实例方法（需要babel）：处理函数用箭头函数，render里面直接用this.处理函数
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title73">
+              React表单处理-受控组件
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              1、state中添加一个状态作为表单的value值；<br />
+              2、给表单元素绑定一个change事件，该事件修改state的值（使用e.target.value）
+            </p>
+            <p class="tips">多个表单元素优化</p>
+            <p class="tips">1、每个表单定义一个name属性，value属性；<br />2、所有表单元素绑定change事件指向同一个处理函数；<br />3、处理函数中从e.target中解构出name、value，this.setState({[name]:value})<br />4、特殊情况，复选框我们需要通过判断他的target.type === 'checkbox'?来赋值value为checked还是value</p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title74">
+              React表单处理-非受控组件
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              使用DOM操作去获取表单元素的值<br />
+              class类组件：<br />
+              1、在constructor中，使用React.createRef()创建一个ref对象<br />2、在文本框中添加ref对象 ref={this.ref}<br />3、通过this.ref.current.value来获取表单元素的值<br />
+              函数组件：<br />
+              使用变量接收ref对象，不需要this调用
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title75">
+              React组件通讯之父传子
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              1、父组件提供状态；
+              2、父组件中的子组件添加属性，值为父组件提供的状态；
+              3、子组件通过props接收父组件传递来的数据
+            </p>
+<pre>// 父组件
+  class Parent extends React.Component {
+    state = { lastName: '王' }
+    render() {
+      return (
+        &lt;div>
+          传递数据给子组件：&lt;Child name={this.state.lastName} />
+        &lt;/div>
+      )
+    }
+  }
+  //子组件
+  function Child(props) {
+    return &lt;div>子组件接收到数据：{props.name}&lt;/div>
+  }
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title76">
+              React组件通讯之子传父
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              1、父组件提供一个事件；2、事件通过props传递给子组件，子组件接收该事件；3、子组件调用该事件时，将数据作为参数传递给父组件
+            </p>
+<pre>// 父组件
+  class Parent extends React.Component {
+    getChildMsg = (msg) => {
+      console.log('接收到子组件数据', msg)
+      }
+    render() {
+      return (
+        <div>
+        子组件：<Child getMsg={this.getChildMsg} />
+        </div>
+      )
+    }
+  }
+  // 子组件
+  class Child extends React.Component {
+    state = { childMsg: 'React' }
+    handleClick = () => {
+      this.props.getMsg(this.state.childMsg)
+    }
+    return (
+      <button onClick={this.handleClick}>点我，给父组件传递数据</button>
+    )
+  }
+</pre>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title77">
+              React组件通讯之兄弟通讯
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              思路：状态提升，将兄弟组件通讯的数据放到父组件上<br />
+              子组件1-父组件-子组件2
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title78">
+              React组件通讯之context跨组件
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              1、创建context并从中解构出Provider,Consumer<br />
+              const { Provider,Consumer } = React.createContext()
+            </p>
+            <p class="tips">
+              2、用Provider包裹发送数据的组件，并给一个value属性<br />
+              &lt;Provider value={数据}>
+            </p>
+            <p class="tips">
+              3、用Consumer包裹接收数据的组件<br />
+              &lt;Consumer>{data=>&lt;p>{data}&lt;/p>}&lt;/Consumer>
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title79">
+              Props深入
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              一、children属性：获取组件标签的子节点，children与props属性相同，可以为任意值（文本、React元素、组件，甚至是函数）
+            </p>
+            <p class="tips">
+              二、props效验：封装公共组件时，约定添加props效验<br />
+              1、安装yarn add prop-types并导入<br />
+              2、使用组件名.propTypes={}来给组件的props添加效验规则
+              3、从PropsTypes获取效验规则，例如：PropTypes.fuc,PropTypes.fuc.isRequired
+            </p>
+            <p class="tips">
+              三、props默认值：组件名.defaultProps={}给props设置默认值
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title80">
+              React路由
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              1、安装yarn add react-router-dom；
+            </p>
+            <p class="tips">
+              2、导入import{Browser Router as Router,Route,Link} from 'react-router-dom'；（Redirect也是从react-router-dom中解构出来的）
+            </p>
+            <p class="tips">
+              3、①使用Router组件包裹整个应用；②配置路由的入口&lt;Link to="地址" >&lt/Link>；③配置路由的出口&lt;Route path="地址" Component={组件} />
+            </p>
+            <p class="tips">
+              4、匹配模式
+            </p>
+            <p class="tips">
+              ①模糊匹配：只要pathname以path开头就会匹配；②精确匹配：给Route组件添加exact属性就只有path与pathname完全相同才会匹配
+            </p>
+          </div>
+          <div class="content_title">
+            <a href="javascript:;" id="title81">
+              Antd-Mobile的BUG
+            </a>
+          </div>
+          <div class="content_main">
+            <p class="tips">
+              一、动态添加的轮播图不自动播放：原因是需要默认数据才能轮播，轮播图刚挂载的时候没有数据，所以无法自动播放
+            </p>
+            <p class="tips">解决办法：给一个标记，数据加载好之后，标记置为true，为true就挂载轮播图</p>
+            <p class="tips">
+              二、手动轮播图时，报错：
+            </p>
+            <p class="tips">
+              解决办法：样式中*{touch-action:pan-y}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="lib/jquery-1.12.4.js"></script>
+  <!-- <script src="lib/jquery-1.12.4.js"></script>
   <script src="lib/jquery.nicescroll.js"></script>
   <script>
     $('.aside_wrapper').niceScroll({
@@ -1521,6 +1797,6 @@ methods:{
           bottom: 0
       }, //滚动条的位置
     })
-  </script>
+  </script> -->
 </body>
 </html>
